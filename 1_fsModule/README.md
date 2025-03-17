@@ -1,0 +1,9 @@
+Why Does Sync Code Run First?
+Synchronous Code (Blocking)
+
+Executes immediately and blocks the event loop until the task is complete.
+The code execution stops until the synchronous task is done.
+Asynchronous Code (Non-Blocking)
+
+Executes the asynchronous task (like fs.readFile) and then continues executing the next lines of code without waiting for the async task to complete.
+The actual async operation is handled in the background via Node.js's event loop and callback queue.
