@@ -31,10 +31,16 @@ console.log('Synchronous file written successfully');
 
 //read file synchronously (blocking) 
 const readSync = () => {
+    try{
 
-    const data = fs.readFileSync("exampleSync.txt", "utf-8");
-    console.log("Synchronous Data: ", data); //this will executed first before async one
-    console.log("Type of Synchronous data: ", typeof (data));
+        const data = fs.readFileSync("exampleSync.txt", "utf-8");
+        console.log("Synchronous Data: ", data); //this will executed first before async one
+        console.log("Type of Synchronous data: ", typeof (data));
+    }
+    catch{
+         console.log('Error reading file:');
+         
+    }
 }
 readSync();
 
@@ -70,3 +76,20 @@ readSync();
 // fs.unlinkSync("exampleSync.txt");
 // console.log("File has been deleted successfully synchronously");
 
+//rename a file
+
+fs.rename("example.txt","example-async.txt",(error)=>{
+    if(error){
+        console.log("unable to rename",error);
+        return;
+    }
+    console.log("File has been renamed successfully.");
+    
+})
+
+//check file or directory is exist
+fs.access('example.txt', fs.constants.F_OK, (err) => {
+    console.log(err ? 'File does not exist' : 'File exists');
+});
+
+//fs.constants.F_OK (optional)  --> fast access (does not check for R_OK(read) or W_OK(write))

@@ -12,9 +12,12 @@ file operations
 1) read   fs.readFile(), fs.readFileSync()
 2) write  fs.writeFile(), fs.writeFileSync()
 3) append  fs.appendFile(), fs.appendFileSync()
-4) delete   fs.unlink(), fs.unlinkSync()
+4) delete  fs.unlink(), fs.unlinkSync()
+5) rename   fs.rename(), fs.renameSync()
 
 Directory operation
 
-1) create dir    mkdir()
-2) 
+1) create dir    mkdir(), mkdirSync()
+2) read dir      readdir(), readdirSync()
+3) delete dir    rmdir(), rmdirSync()
+4) rename        fs.rename(), fs.renameSync()
