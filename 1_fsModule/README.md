@@ -7,3 +7,14 @@ Asynchronous Code (Non-Blocking)
 
 Executes the asynchronous task (like fs.readFile) and then continues executing the next lines of code without waiting for the async task to complete.
 The actual async operation is handled in the background via Node.js's event loop and callback queue.
+
+file operations
+1) read   fs.readFile(), fs.readFileSync()
+2) write  fs.writeFile(), fs.writeFileSync()
+3) append  fs.appendFile(), fs.appendFileSync()
+4) delete   fs.unlink(), fs.unlinkSync()
+
+Directory operation
+
+1) create dir    mkdir()
+2) 

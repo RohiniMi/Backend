@@ -1,1 +1,2 @@
 Hii! This data is written using the synchronous method of fs
+Appended data using sync method
